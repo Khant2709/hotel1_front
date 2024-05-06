@@ -1,0 +1,53 @@
+.main {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+    padding: 4rem 0;
+    flex-direction: column;
+}
+
+.title, .titleSecond {
+    font-size: 2rem;
+    align-self: center;
+}
+
+.titleSecond {
+    margin-top: 4rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+}
+
+.text {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.list {
+    font-size: 1.25rem;
+    margin-left: 4rem;
+    list-style-type: none;
+}
+
+.table {
+    width: var(--width100);
+}
+
+.table, .table td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.table td {
+    padding: 1rem 1.5rem;
+}
+
+.table ul {
+    list-style-type: none;
+}
+
+.table li {
+    margin-bottom: 1rem;
+}

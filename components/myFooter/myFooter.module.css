@@ -1,0 +1,36 @@
+.main {
+    width: 100%;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main a {
+    color: var(--colorWave);
+    text-decoration: none;
+}
+
+.main a:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .main {
+        font-size: 0.825rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .main p {
+        margin-bottom: 1rem;
+    }
+}

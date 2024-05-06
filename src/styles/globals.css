@@ -1,0 +1,87 @@
+:root {
+  --colorMain: #96CFD2;
+  --colorBrown: #9A7243;
+  --colorBlue: #76C5FF;
+  --colorWave: #6DA2C2;
+
+  --colorMain2: #EBF9FA;
+  --colorBrown2: #F0E8DF;
+  --colorBlue2: #ECF6FD;
+  --colorWave2: #E8F6FF;
+
+  --colorHoverMain: rgb(26, 58, 73);
+  --colorHoverBrown: rgb(108, 67, 19);
+  --colorHoverBlue: rgb(48, 112, 157);
+  --colorHoverWave: rgb(21, 79, 115);
+
+  --colorMainTextWhite: #FFFFFF;
+  --colorMainTextBlack: #000000;
+
+  --colorSeconderyTextWhite: rgba(255, 255, 255, 0.6);
+  --colorSeconderyTextBlack: rgba(0, 0, 0, 0.5);
+
+  --colorBackground: rgb(246, 252, 255);
+
+  --widthComputer: 70%;
+  --width1600: 80%;
+  --width1250: 85%;
+
+  --colorBackgroundMobile: #9EC6DE;
+}
+
+/*
+  hotel1 - Шикарный вид
+  hotel2 - Бор'О'Дача
+  hotel3 - Вижу море
+  hotel4 - Сан Марино
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--colorBackground);
+}
+
+
+@media (max-width: 1600px) {
+  .test {
+    margin: 4rem 0;
+  }
+}
+
+@media (max-width: 1250px) {
+
+}
+
+@media (max-width: 1100px) {
+
+}
+
+@media (max-width: 900px) {
+  .test {
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 360px) {
+
+}
+
+/*Font size from title*/
+/*font-size: calc(24px + (48 - 24) * (100vw - 480px) / (1920 - 480));*/

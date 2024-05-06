@@ -1,0 +1,13 @@
+.main {
+    width: var(--widthComputer);
+    min-height: 55vh;
+    margin: 0 auto;
+
+    font-size: calc(24px + (40 - 24) * (100vw - 480px) / (1920 - 480));
+    text-align: center;
+    color: var(--colorSeconderyTextBlack);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

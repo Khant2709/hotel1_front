@@ -1,0 +1,29 @@
+.wrapperLink {
+    display: flex;
+    align-items: center;
+
+}
+
+.wrapperLink a {
+    text-decoration: none;
+    color: var(--colorMainTextBlack);
+}
+
+.wrapperLink img {
+    width: 1.5rem;
+    height: auto;
+    margin-left: 0.75rem;
+}
+
+.wrapperLink a:hover {
+    color: var(--colorMain);
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .wrapperLink {
+        margin-bottom: 0.75rem;
+
+    }
+}

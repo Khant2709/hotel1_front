@@ -1,0 +1,47 @@
+.main {
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+}
+
+.wrapperForm, .wrapperErrorSecondSection, .wrapperErrorFifthSection {
+    width: var(--widthComputer);
+    margin: 0 auto;
+}
+
+.wrapperErrorSecondSection {
+    margin-bottom: 4rem;
+}
+
+.wrapperErrorFifthSection {
+    margin: 4rem auto;
+}
+
+@media (max-width: 1600px) {
+    .wrapperForm, .wrapperErrorSecondSection, .wrapperErrorFifthSection {
+        width: var(--width1600);
+    }
+}
+
+@media (max-width: 1250px) {
+    .wrapperForm, .wrapperErrorSecondSection, .wrapperErrorFifthSection {
+        width: var(--width1250);
+    }
+}
+
+@media (max-width: 900px) {
+    .wrapperErrorSecondSection {
+        margin-bottom: 2rem;
+    }
+
+    .wrapperErrorFifthSection {
+        margin: 2rem auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapperForm {
+        display: none;
+    }
+}

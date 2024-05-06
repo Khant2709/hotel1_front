@@ -1,0 +1,131 @@
+@keyframes move {
+    0%   {bottom: 7%;}
+    50%  {bottom: 5%;}
+    100% {bottom: 7%;}
+}
+
+.main, .background {
+    width: 100%;
+    height: calc(480px + (960 - 480) * (100vw - 480px) / (1920 - 480));
+}
+
+.main {
+    background-color: rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    z-index: -10;
+}
+
+.iconDown {
+    width: calc(24px + (48 - 24) * (100vw - 480px) / (1920 - 480));
+    height: auto;
+
+    position: absolute;
+    animation: move 2s infinite;
+}
+
+.wrapperHotels {
+    width: var(--widthComputer);
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: calc(32px + (80 - 32) * (100vw - 480px) / (1920 - 480));
+    color: var(--colorMainTextWhite);
+}
+
+.title2 {
+    margin-left: 4rem;
+}
+
+.wrapperFormCall {
+    width: 100%;
+}
+
+.wrapperFormSearch {
+    display: none;
+}
+
+@media (max-width: 1600px) {
+    .wrapperHotels {
+        width: var(--width1600);
+    }
+}
+
+@media (max-width: 1250px) {
+    .wrapperHotels {
+        width: var(--width1250);
+    }
+}
+
+@media (max-width: 900px) {
+    .wrapperHotels {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title {
+        display: none;
+    }
+
+    .wrapperFormCall {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapperFormCall {
+        width: 80%;
+    }
+
+    .wrapperFormCall {
+        display: none;
+    }
+
+    .wrapperFormSearch {
+        width: 100%;
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        justify-content: flex-start;
+    }
+
+    .title {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .title2 {
+        margin-left: 0;
+    }
+
+    .wrapperFormCall {
+        width: 100%;
+    }
+
+    .iconDown {
+        display: none;
+    }
+
+    .wrapperFormSearch {
+        margin-top: 4rem;
+    }
+}

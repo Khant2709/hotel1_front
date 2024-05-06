@@ -1,0 +1,39 @@
+.main {
+    width: var(--widthComputer);
+    min-height: 40vh;
+    margin: 4rem auto;
+}
+
+.containerMain {
+    width: 100%;
+
+    margin-top: 4rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+@media (max-width: 1600px) {
+    .main {
+        width: var(--width1600);
+    }
+}
+
+@media (max-width: 1250px) {
+    .main {
+        width: var(--width1250);
+    }
+}
+
+@media (max-width: 900px) {
+    .main {
+        margin: 2rem auto;
+    }
+
+    .containerMain {
+        margin-top: 2rem;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

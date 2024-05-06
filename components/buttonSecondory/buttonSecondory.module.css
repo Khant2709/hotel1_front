@@ -1,0 +1,23 @@
+.btn {
+    font-size: calc(16px + (20 - 16) * (100vw - 480px) / (1920 - 480));
+    color: var(--colorMainTextWhite);
+    background-color: var(--colorMain);
+    padding: 0.5rem 1.5rem;
+    border-radius: 80px;
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+@media (max-width: 900px) {
+    .btn {
+        padding: 0.5rem 1.25rem;
+    }
+}

@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter'),
+    url('../fonts/inter/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+    font-display: swap;
+}
+
+.Inter300 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.Inter700 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}

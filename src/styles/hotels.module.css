@@ -1,0 +1,23 @@
+.main {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapperError {
+    width: var(--widthComputer);
+    margin: 4rem auto;
+}
+
+@media (max-width: 1600px) {
+    .wrapperError {
+        width: var(--width1600);
+    }
+}
+
+@media (max-width: 1250px) {
+    .wrapperError {
+        width: var(--widthComputer);
+    }
+}

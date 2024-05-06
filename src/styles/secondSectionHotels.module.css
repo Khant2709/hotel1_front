@@ -1,0 +1,135 @@
+.main, .wrapperHotel {
+    width: 100%;
+}
+
+.main, .containerHotel, .informationContainerHotel, .wrapperBtn {
+    display: flex;
+}
+
+.main {
+    flex-direction: column;
+}
+
+.wrapperHotel {
+    margin-top: 4rem;
+    padding: 3rem 0;
+}
+
+.wrapperHotel:last-child {
+    margin-bottom: 4rem;
+}
+
+.containerHotel {
+    width: var(--widthComputer);
+    margin: 0 auto;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.informationContainerHotel {
+    width: 60%;
+
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nameHotel {
+    font-size: calc(32px + (48 - 32) * (100vw - 480px) / (1920 - 480));
+    margin-bottom: 2rem;
+}
+
+.descriptionHotel {
+    font-size: calc(16px + (24 - 16) * (100vw - 480px) / (1920 - 480));
+    margin-bottom: 2rem;
+}
+
+.imgHotel {
+    width: 35%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.wrapperBtn button:first-child {
+    margin-right: 2rem;
+}
+
+@media (max-width: 1600px) {
+    .containerHotel {
+        width: var(--width1600);
+    }
+}
+
+@media (max-width: 1250px) {
+    .containerHotel {
+        width: var(--width1250);
+    }
+}
+
+@media (max-width: 1100px) {
+    .imgHotel {
+        width: 40%;
+    }
+}
+
+@media (max-width: 900px) {
+    .wrapperHotel {
+        margin-top: 2rem;
+    }
+
+    .wrapperHotel:last-child {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .containerHotel, .informationContainerHotel {
+        width: 100%;
+    }
+
+    .informationContainerHotel {
+        align-items: center;
+    }
+
+    .nameHotel, .descriptionHotel {
+        width: var(--width1250);
+        text-align: center;
+    }
+
+    .imgHotel {
+        width: 100%;
+        height: calc(240px + (400 - 240) * (100vw - 480px) / (768 - 480));
+        border-radius: 0;
+        margin-bottom: 2rem;
+    }
+
+    .wrapperBtn {
+        width: var(--width1250);
+
+        justify-content: center;
+    }
+
+    .wrapperBtn button:first-child {
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapperHotel {
+        padding: 2rem 0;
+    }
+
+    .nameHotel {
+        margin-bottom: 1rem;
+    }
+
+    .wrapperBtn {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapperBtn button:first-child {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}

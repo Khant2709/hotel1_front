@@ -1,0 +1,30 @@
+.wrapperTitle {
+    max-width: 40rem;
+
+    margin: 0 auto;
+    text-align: center;
+    font-size: calc(32px + (56 - 32) * (100vw - 480px) / (1920 - 480));
+
+    position: relative;
+}
+
+.line {
+    width: 100%;
+    height: auto;
+    fill: #639a43;
+}
+
+.nameHotel {
+    font-size: calc(24px + (40 - 24) * (100vw - 480px) / (1920 - 480));
+    text-align: center;
+}
+
+@media (max-width: 1100px) {
+    .wrapperTitle {
+        max-width: 30rem;
+    }
+
+    .line {
+        width: 80%;
+    }
+}

@@ -1,0 +1,132 @@
+.main, .wrapperMain, .containerTitle {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    width: 100%;
+}
+
+.wrapperFormSearch, .wrapperMain, .containerError {
+    width: var(--widthComputer);
+}
+
+.wrapperFormSearch, .containerError {
+    margin: 0 auto;
+}
+
+.wrapperMain {
+    margin: 0 auto 4rem;
+}
+
+.containerError {
+    min-height: 55vh;
+}
+
+/* CALENDAR */
+.titleCalendar {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    opacity: 0.6;
+}
+
+.wrapperCalendar {
+    width: 50%;
+    margin: 2rem auto 0;
+    padding: 2rem;
+    background: white;
+    border: 1px solid var(--colorMain);
+    border-radius: 12px;
+}
+
+
+/* Analogues Rooms */
+.wrapperAnaloguesRooms {
+    width: 100%;
+    margin-top: 4rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapperAnaloguesRooms h2 {
+    font-size: calc(24px + (48 - 24) * (100vw - 480px) / (1920 - 480));
+    margin: 0;
+    text-align: left;
+}
+
+.wrapperCards {
+    margin-top: 4rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 1600px) {
+    .wrapperFormSearch, .wrapperMain {
+        width: var(--width1600);
+    }
+}
+
+@media (max-width: 1250px) {
+    .wrapperFormSearch, .wrapperMain {
+        width: var(--width1250);
+    }
+}
+
+@media (max-width: 1100px) {
+    .wrapperCalendar {
+        width: 60%;
+    }
+
+    .wrapperCards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .wrapperMain {
+        margin: 0 auto 2rem;
+    }
+
+    .wrapperCalendar {
+        width: 75%;
+    }
+
+    .wrapperAnaloguesRooms, .wrapperCards {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapperFormSearch {
+        display: none;
+    }
+
+    .wrapperCalendar {
+        width: 85%;
+    }
+
+    .wrapperCards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapperCalendar {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .titleCalendar {
+        font-size: 1.25rem;
+    }
+
+    .wrapperCalendar {
+        width: 100%;
+        margin-top: 1rem;
+        padding: 1rem;
+    }
+}

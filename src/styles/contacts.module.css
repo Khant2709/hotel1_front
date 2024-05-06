@@ -1,0 +1,170 @@
+.main, .mainContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.main, .wrapperFormSearch {
+    width: 100%;
+}
+
+.mainContainer {
+    width: var(--widthComputer);
+    margin: 0 auto 4rem;
+}
+
+.mainContainer h1 {
+    margin-bottom: 4rem;
+}
+
+/* Блок информации номер/почта */
+.containerContacts, .containerAddress {
+    font-size: calc(16px + (24 - 16) * (100vw - 480px) / (1920 - 480));
+}
+
+.containerContacts {
+    margin-bottom: 2rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.subTitle {
+    color: var(--colorSeconderyTextBlack);
+    margin-right: 2rem;
+}
+
+/* Блок всех отелей */
+.containerAddress {
+    display: flex;
+}
+
+.wrapperHotels {
+    width: 70%;
+    align-self: center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+/* Блок отеля */
+.containerHotel {
+    font-size: calc(14px + (20 - 14) * (100vw - 480px) / (1920 - 480));
+    padding: 1rem 2rem;
+    background-color: var(--colorMain2);
+    border: 3px solid var(--colorMain);
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activeHotel {
+    background-color: var(--colorMainTextWhite);
+}
+
+.nameHotel {
+    font-size: calc(20px + (32 - 20) * (100vw - 480px) / (1920 - 480));
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.addressHotel {
+    margin-bottom: 1rem;
+}
+
+.websiteHotel {
+    text-decoration: underline;
+    color: var(--colorWave);
+}
+
+.websiteHotel:hover {
+    color: var(--colorMainTextBlack);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.wrapperFormCall {
+    width: 60%;
+    margin: 4rem auto 0;
+}
+
+
+@media (max-width: 1600px) {
+    .mainContainer {
+        width: var(--width1600);
+    }
+}
+
+@media (max-width: 1250px) {
+    .mainContainer {
+        width: var(--width1250);
+    }
+}
+
+@media (max-width: 1100px) {
+    .wrapperHotels {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .mainContainer, .mainContainer h1 {
+        margin-bottom: 2rem;
+    }
+
+
+    .containerAddress {
+        flex-direction: column;
+    }
+
+    .wrapperHotels {
+        width: 100%;
+        margin-top: 1rem;
+        align-self: flex-start;
+        gap: 2rem;
+    }
+
+    .wrapperFormCall {
+        width: 70%;
+        margin: 2rem auto 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapperFormSearch {
+        display: none;
+    }
+
+    .containerContacts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .subTitle {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .wrapperHotels {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .wrapperFormCall {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .containerContacts, .containerAddress {
+        margin-bottom: 1rem;
+    }
+
+    .containerHotel {
+        padding: 1rem 1.5rem;
+    }
+}

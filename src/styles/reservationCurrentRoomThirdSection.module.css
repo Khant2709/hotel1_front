@@ -1,0 +1,77 @@
+/* FORM RESERVATION CURRENT ROOM */
+.wrapperForm {
+    width: 100%;
+    margin-top: 4rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.containerForm {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.containerColumn {
+
+}
+
+.containerColumn input, .containerColumn select, .containerPrice {
+    width: 100%;
+    font-size: 1rem;
+
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--colorMain);
+    border-radius: 12px;
+}
+
+.containerPrice {
+    background: white;
+}
+
+.error {
+    font-size: 1.25rem;
+    color: rgba(255, 0, 0, 0.8);
+
+    margin-top: 2rem;
+}
+
+@media (max-width: 1250px) {
+    .containerForm {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .wrapperForm {
+        margin-top: 2rem;
+    }
+
+    .error {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .containerForm {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .containerForm {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+
+    .error {
+        font-size: 0.75rem;
+    }
+}

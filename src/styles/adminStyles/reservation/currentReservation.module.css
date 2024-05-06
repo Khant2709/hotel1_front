@@ -1,0 +1,113 @@
+.main {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapperContainer {
+    width: 60%;
+    margin: 4rem auto 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin-bottom: 2rem;
+
+}
+
+.container h2 {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: calc(20px + (32 - 20) * (100vw - 480px) / (1920 - 480));
+    background-color: rgba(109, 236, 252, 0.25);
+}
+
+.row {
+    font-size: calc(16px + (24 - 16) * (100vw - 480px) / (1920 - 480));
+    text-align: right;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.row p:first-child {
+    color: var(--colorSeconderyTextBlack);
+    text-align: left;
+}
+
+.inp {
+    width: 50%;
+    padding: 0.5rem 1.25rem;
+
+    border: 2px solid var(--colorMain);
+    border-radius: 12px;
+    box-shadow: 4px 4px 2px -5px rgba(0, 0, 0, 0.25);
+}
+
+.editInfo {
+    margin-top: 1rem;
+}
+
+.containerBtns {
+    display: flex;
+    justify-content: space-around;
+}
+
+.containerBtns button {
+    font-size: calc(16px + (20 - 16) * (100vw - 480px) / (1920 - 480));
+
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    border: none;
+}
+
+.containerBtns button:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.containerBtns button:active {
+    transform: scale(0.9);
+}
+
+.btnSuccses {
+    background-color: rgba(127, 255, 127, 0.5);
+}
+
+.btnArchive {
+    margin: 0 1rem;
+}
+
+.btnDelete {
+    background-color: rgba(255, 123, 123, 0.5);
+}
+
+@media (max-width: 900px) {
+    .wrapperContainer {
+        width: 80%;
+        margin: 2rem auto 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .wrapperContainer {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .containerBtns {
+        flex-direction: column;
+        justify-content: normal;
+    }
+
+    .btnArchive, .btnArchive2 {
+        margin: 1.5rem 0;
+    }
+}

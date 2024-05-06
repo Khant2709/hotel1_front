@@ -1,0 +1,64 @@
+/* TABLE */
+.wrapperTable {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 2rem;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 400px; /* Минимальная ширина таблицы для удобного отображения на мобильных устройствах */
+}
+
+.table td, .table th {
+    padding: 0.75rem 0.5rem;
+    white-space: nowrap; /* Предотвращение переноса текста */
+    text-align: left;
+
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.table tr:nth-child(even) {
+    background: rgba(127, 198, 255, 0.2);
+}
+
+.table thead th {
+    text-align: center;
+}
+
+.table a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.edit {
+    background: #e1e1e1;
+    cursor: pointer;
+    padding: 0.3rem; /* Уменьшение отступов для иконки редактирования */
+}
+
+.editIcon {
+    width: 1rem;
+    height: auto;
+}
+
+.edit:hover {
+    cursor: pointer;
+    background: #FFFFFF;
+}
+
+.nowLiving {
+    background-color: rgba(141, 255, 146, 0.75) !important;
+}
+
+.finishedLiving {
+    background-color: rgba(255, 123, 123, 0.75) !important;
+}
+
+@media (max-width: 600px) {
+    .table td, .table th {
+        padding: 0.3rem;
+    }
+}

@@ -1,0 +1,12 @@
+.errorLadingData {
+    margin: 2rem auto;
+
+    font-size: calc(24px + (32 - 24) * (100vw - 480px) / (1920 - 480));
+    text-align: center;
+    color: var(--colorSeconderyTextBlack);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

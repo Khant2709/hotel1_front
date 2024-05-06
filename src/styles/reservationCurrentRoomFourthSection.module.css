@@ -1,0 +1,18 @@
+.main {
+    margin-top: 2rem;
+}
+
+.main p {
+    font-size: calc(16px + (22 - 16) * (100vw - 480px) / (1920 - 480));
+
+    color: var(--colorSeconderyTextBlack);
+    margin-bottom: 0.5rem;
+}
+
+.main p:last-child {
+    margin-bottom: 0;
+}
+
+.main span {
+    font-weight: bold;
+}

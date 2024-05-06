@@ -1,0 +1,71 @@
+.containerMain {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: calc(20px + (28 - 20) * (100vw - 480px) / (1920 - 480));
+    color: var(--colorMainTextWhite);
+}
+
+.containerMain input {
+    width: 90%;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    margin: 2rem auto 1rem;
+}
+
+.errorText {
+    font-size: calc(14px + (20 - 14) * (100vw - 480px) / (1920 - 480));
+    text-align: center;
+    color: #ff1818;
+}
+
+.containerMain button {
+    margin-top: 2rem;
+}
+
+.containerCheckbox {
+    width: 90%;
+    color: #FFFFFF;
+    margin-top: 1rem;
+
+    display: flex;
+    align-items: flex-start;
+}
+
+.containerCheckbox input {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    margin: 0 1rem 0 0;
+}
+
+.containerCheckbox span {
+    color: var(--colorMain);
+}
+
+.containerCheckbox span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .containerMain {
+        padding: 2rem 1rem;
+    }
+
+    .containerMain input {
+        width: 100%;
+        padding: 0.75rem 1.5rem;
+    }
+}

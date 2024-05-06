@@ -1,0 +1,157 @@
+.main {
+    width: 100%;
+}
+
+.main, .wrapperOtherHotels, .containerHotel {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapperFormSearch, .wrapperOtherHotels, .wrapperError {
+    width: var(--widthComputer);
+}
+
+.wrapperFormSearch, .wrapperError {
+    margin: 0 auto 0;
+}
+
+.wrapperError {
+    min-height: 55vh;
+}
+
+/* Список карточек */
+.containerAllHotels {
+    margin-top: 4rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.wrapperSubTitle {
+    margin: 4rem auto;
+}
+
+.wrapperOtherHotelsList {
+    margin-bottom: 4rem;
+}
+
+/* Блок других отелей */
+.wrapperOtherHotels {
+    margin: 4rem auto;
+}
+
+.containerHotel {
+    padding: 2rem;
+    background-color: var(--colorMain);
+    border-radius: 35px;
+
+    align-items: center;
+}
+
+.imgHotel {
+    width: 100%;
+    height: 13rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: calc(24px + (32 - 24) * (100vw - 480px) / (1920 - 480));
+    color: var(--colorMainTextBlack);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1rem;
+    color: var(--colorSeconderyTextBlack);
+    margin-bottom: 2rem;
+
+    -webkit-line-clamp: 6; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+}
+
+.link {
+    font-size: calc(20px + (28 - 20) * (100vw - 480px) / (1920 - 480));
+}
+
+.link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1600px) {
+    .wrapperFormSearch, .wrapperOtherHotels, .wrapperError {
+        width: var(--width1600);
+    }
+}
+
+@media (max-width: 1250px) {
+    .wrapperFormSearch, .wrapperOtherHotels, .wrapperError {
+        width: var(--width1250);
+    }
+}
+
+@media (max-width: 1100px) {
+    .containerAllHotels {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .containerAllHotels {
+        position: relative;
+    }
+
+    .iconLeft, .iconRight {
+        position: absolute;
+        top: 50%;
+    }
+
+    .iconRight {
+        right: -1rem;
+    }
+
+    .iconLeft {
+        transform: rotate(180deg);
+        left: -1rem;
+    }
+
+    .iconLeft:hover, .iconRight:hover {
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .containerAllHotels {
+        margin-top: 2rem;
+    }
+
+    .wrapperOtherHotels, .wrapperSubTitle {
+        margin: 2rem auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .containerAllHotels {
+        grid-template-columns: 1fr;
+    }
+
+    .imgHotel {
+        height: calc(208px + (320 - 208) * (100vw - 480px) / (768 - 480));
+    }
+
+    .wrapperFormSearch {
+        display: none;
+    }
+}

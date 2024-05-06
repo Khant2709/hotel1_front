@@ -1,0 +1,41 @@
+.containerHeader {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.link:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media (max-width: 1600px) {
+    .containerHeader {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .containerHeader {
+        width: 70%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .link {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .containerHeader {
+        width: 85%;
+    }
+}

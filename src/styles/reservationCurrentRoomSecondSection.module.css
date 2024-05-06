@@ -1,0 +1,127 @@
+.title {
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+.containerList {
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.wrapperItem {
+    font-size: 1.5rem;
+    color: var(--colorSeconderyTextBlack);
+    margin-right: 1rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    background-color: var(--colorSeconderyTextBlack);
+}
+
+.containerDescriptionHotel {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.subTitle {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--colorSeconderyTextBlack);
+}
+
+.comfortList {
+    margin-left: 2rem;
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+}
+
+
+@media (max-width: 1100px) {
+    .comfortList {
+        margin-left: 2rem;
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .wrapperItem {
+        font-size: 1.25rem;
+    }
+
+    .circle {
+        width: 0.375rem;
+        height: 0.375rem;
+    }
+
+    .containerDescriptionHotel {
+        margin-top: 2rem;
+        font-size: 1.25rem;
+    }
+
+    .subTitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .containerList {
+        margin-top: 1rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .wrapperItem {
+        font-size: 1rem;
+    }
+
+    .circle {
+        width: 0.375rem;
+        height: 0.375rem;
+    }
+
+    .containerDescriptionHotel {
+        font-size: 1rem;
+        margin-top: 1rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .subTitle {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .comfortList {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+}
