@@ -20,11 +20,11 @@
   --colorSeconderyTextWhite: rgba(255, 255, 255, 0.6);
   --colorSeconderyTextBlack: rgba(0, 0, 0, 0.5);
 
-  --colorBackground: rgb(246, 252, 255);
+  --colorBackground: rgb(243, 249, 255);
 
-  --widthComputer: 70%;
-  --width1600: 80%;
-  --width1250: 85%;
+  --widthComputer: 60%;
+  --width1600: 75%;
+  --width1250: 90%;
 
   --colorBackgroundMobile: #9EC6DE;
 }

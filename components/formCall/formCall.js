@@ -57,7 +57,7 @@ const FormCall = ({text, numberHotel}) => {
         <section className={`${stylesFontsT.newRoman400} ${styles.containerMain}`}>
             <p className={styles.title}>Обратный звонок</p>
 
-            <input className={stylesFontsT.newRoman400}
+            <input className={`${stylesFontsT.newRoman400} ${styles.inp}`}
                    name={'name'}
                    placeholder={'Имя'}
                    value={fields.name}
@@ -66,7 +66,7 @@ const FormCall = ({text, numberHotel}) => {
             />
             {fieldsTouch.nameTouch && !checkName.valid && <p className={styles.errorText}>{checkName.message}</p>}
 
-            <input className={stylesFontsT.newRoman400}
+            <input className={`${stylesFontsT.newRoman400} ${styles.inp}`}
                    name={'phone'}
                    placeholder={'9892436080'}
                    value={fields.phone}

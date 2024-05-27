@@ -1,6 +1,6 @@
 .btn {
-    font-size:  calc(16px + (24 - 16) * (100vw - 480px) / (1920 - 480));
-    padding: 0.5rem 2rem;
+    font-size:  calc(16px + (20 - 16) * (100vw - 480px) / (1920 - 480));
+    padding: 0.5rem 1.5rem;
     border-radius: 80px;
     border: 4px inset transparent;
     background-color: var(--colorMain);

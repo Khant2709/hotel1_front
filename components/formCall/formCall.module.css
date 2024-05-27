@@ -15,7 +15,7 @@
     color: var(--colorMainTextWhite);
 }
 
-.containerMain input {
+.inp {
     width: 90%;
     border: none;
     border-radius: 12px;
@@ -64,7 +64,7 @@
         padding: 2rem 1rem;
     }
 
-    .containerMain input {
+    .inp {
         width: 100%;
         padding: 0.75rem 1.5rem;
     }

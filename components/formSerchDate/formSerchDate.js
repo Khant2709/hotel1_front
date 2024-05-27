@@ -26,13 +26,12 @@ const FormSearchDate = ({color, searchParams,}) => {
     const [errorReservation, setErrorReservation] = useState(null);
 
     const today = new Date(getToday()).getTime();
-    let dataStartReservation = new Date(startReservation);                                                              // Преобразовываем в дату
-    let dataEndReservation = new Date(endReservation);
 
     useEffect(() => {
+        const dataStartReservation = new Date(startReservation);
+        const dataEndReservation = new Date(endReservation);
         const startDate = dataStartReservation.getTime();
         const endDate = dataEndReservation.getTime();
-        //Проверка на корректность дат
         validateFormReservation({
             today,
             startDate,
@@ -41,7 +40,7 @@ const FormSearchDate = ({color, searchParams,}) => {
             countPeopleReservation,
             setErrorReservation: setErrorReservation
         });
-    }, [startReservation, endReservation, countPeopleReservation, today, dataStartReservation, dataEndReservation]);
+    }, [startReservation, endReservation, countPeopleReservation, today]);
 
     const reloadSearch = () => {
         router.push(`/reservationall?startReservation=${startReservation.trim()}&endReservation=${endReservation.trim()}&countPeopleReservation=${countPeopleReservation}`)

@@ -15,19 +15,19 @@ export default async function PageReservation() {
     const [allReservation, setAllReservation] = useState([]);
 
     useEffect(() => {
-        getAllData.allHotels()
-            .then(res => {
-                setAllHotel(res.data.data);
-            })
-        getAllData.allApartments()
-            .then(res => {
-                setAllApartments(res.data.data);
-            })
-        getAllData.allBookings()
-            .then(res => {
-                setAllReservation(res.data.data);
-            })
-    }, [])
+        const fetchData = async () => {
+            const hotelData = await getAllData.allHotels();
+            setAllHotel(hotelData.data.data);
+
+            const apartmentsData = await getAllData.allApartments();
+            setAllApartments(apartmentsData.data.data);
+
+            const reservationsData = await getAllData.allBookings();
+            setAllReservation(reservationsData.data.data);
+        };
+
+        fetchData();
+    }, []);
 
     // Определение текущей даты
     const currentDate = new Date();

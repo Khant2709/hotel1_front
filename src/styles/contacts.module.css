@@ -33,6 +33,41 @@
     margin-right: 2rem;
 }
 
+/* Блок информации как добраться */
+.containerInformation {
+    margin-bottom: 2rem;
+}
+
+.titleInformation {
+    font-size: calc(16px + (24 - 16) * (100vw - 480px) / (1920 - 480));
+    color: var(--colorSeconderyTextBlack);
+}
+
+.wrapperRowInformation {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.subTitleInformation {
+    font-size: calc(16px + (24 - 16) * (100vw - 480px) / (1920 - 480));
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.textInformation {
+    font-size: calc(14px + (20 - 14) * (100vw - 480px) / (1920 - 480));
+}
+
+.textInformation li {
+    margin: 1rem 2rem;
+}
+
+.textInformation li:last-child {
+    margin-bottom: 0;
+}
+
+
 /* Блок всех отелей */
 .containerAddress {
     display: flex;
@@ -85,6 +120,13 @@
     text-decoration: none;
 }
 
+.finishText {
+    font-size: calc(16px + (24 - 16) * (100vw - 480px) / (1920 - 480));
+    font-style: italic;
+    text-align: center;
+    margin-top: 4rem;
+}
+
 .wrapperFormCall {
     width: 60%;
     margin: 4rem auto 0;
@@ -124,6 +166,10 @@
         margin-top: 1rem;
         align-self: flex-start;
         gap: 2rem;
+    }
+
+    .finishText {
+        margin-top: 2rem;
     }
 
     .wrapperFormCall {

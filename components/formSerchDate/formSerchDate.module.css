@@ -22,7 +22,10 @@
     margin-top: 2rem;
 }
 
-.wrapperFilter input, .wrapperFilter select {
+.wrapperFilter input[type="date"], .wrapperFilter select {
+    -webkit-appearance: none; /* Отключаем стандартный вид */
+    background-color: #FFFFFF;
+
     width: 100%;
     font-size: 1.25rem;
     padding: 0.5rem 1.25rem;

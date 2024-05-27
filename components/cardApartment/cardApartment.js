@@ -2,7 +2,7 @@ import React from 'react';
 import Image from "next/image";
 
 import {mainColorHotel} from "../../informationData/styleHotels";
-import ButtonSecondary from "../buttonSecondory/buttonSecondory";
+import Button from "../button/button";
 import transformPrice from "../../utils/transformPrice";
 
 import styles from './cardApartment.module.css';
@@ -27,7 +27,7 @@ const CardApartment = ({image, title, bedsCount, roomsCount, cost, numberHotel, 
             <p>
                 От {transformPrice(cost)} <span className={styles.cost}>руб/сутки</span>
             </p>
-            <ButtonSecondary text={'Подробнее'} hotel={numberHotel} handleClick={transition}/>
+            <Button text={'Подробнее'} hotel={numberHotel} handleClick={transition}/>
         </div>
     </div>
 );

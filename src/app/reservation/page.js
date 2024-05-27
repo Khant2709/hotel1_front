@@ -1,66 +1,29 @@
 import React from 'react';
 
-import FormSearchDate from "../../../components/formSerchDate/formSerchDate";
-import HeaderLineBackground from "../../../components/headerLineBackgrund/headerLineBackground";
-import WrapperHotel from "../../../components/ContainerHotel/ContainerHotel";
 import FirstSection from "../../particles/reservation/firstSection";
-import allRequest from "../../../utils/allRequest";
+import WrapperHotel from "../../../components/ContainerHotel/ContainerHotel";
+import FormSearchDate from "../../../components/formSerchDate/formSerchDate";
 import ErrorLadingData from "../../../components/errorLadingData/errorLadingData";
+import HeaderLineBackground from "../../../components/headerLineBackgrund/headerLineBackground";
 
+import allRequest from "../../../utils/allRequest";
 import {getAllData} from "../../../utils/axios";
-import {numberCurrentHotel} from "../../../informationData/contacts";
 import {validateArray, validateObject} from "../../../utils/validate/validateGettingData";
+
+import {numberCurrentHotel} from "../../../informationData/contacts";
+import {metaDataReservationAllPage} from "../../../metaSeo/metaData";
+import {jsonLDReservationPage} from "../../../metaSeo/seoData";
 
 import styles from '../../styles/reservation.module.css';
 
 export const metadata = {
-    title: "Бронирование || Шикарный вид",
-    description: "Выбирайте и бронируйте номера на Черном море в Кабардинке в нашем отеле. Сравните цены, количество комнат и вместимость для идеального отдыха у моря.",
-    keywords: [
-        "Шикарный Вид",
-        "Кабардинка",
-        "Краснодарский край",
-        "бронирование отеля",
-        "забронировать номер",
-        "кабардинка номера",
-        "кабардинка отели",
-        "отель кабардинка",
-        "кабардинка отдых",
-        "жилье в кабардинке",
-        "кабардинка жилье недорого",
-        "кабардинка гостевые дома",
-        "гостевые дома кабардинки цены",
-        "кабардинка снять жилье +у моря",
-    ], // Ключевые слова, связанные с вашим отелем и местоположением
-
+    ...metaDataReservationAllPage,
     openGraph: {
-        title: 'Бронирование || Шикарный вид',
-        description: 'Выбирайте и бронируйте номера на Черном море в Кабардинке в нашем отеле. Сравните цены, количество комнат и вместимость для идеального отдыха у моря.',
-        url: 'https://shikarnyivid.ru/reservation', // Абсолютный URL вашей страницы
-        images: [   //изображений, которые могут быть использованы для представления вашей страницы при ее публикации в социальных сетях или других сервисах
-            {
-                url: 'https://shikarnyivid.ru/og-image.jpg', // Абсолютный URL изображения
-                width: 1200,
-                height: 630,
-                alt: 'Отель "Шикарный Вид" в Кабардинке', // Альтернативный текст для изображения
-            },
-        ],
-        locale: 'ru_RU', // Языковая локаль (русский, Россия)
-        type: 'website', // Тип страницы (веб-сайт)
+        ...metaDataReservationAllPage.openGraph,
+        url: 'https://shikarnyivid.ru/reservation',
     },
-    robots: {
-        index: true, // Не индексировать страницу
-        follow: true, // Следовать по ссылкам на странице
-        googleBot: {
-            index: true, // Индексировать содержимое страницы GoogleBot
-            follow: true, // Не следовать по ссылкам GoogleBot
-        },
-        yandexBot: {
-            index: true, // Индексировать содержимое страницы YandexBot
-            follow: true, // Следовать по ссылкам YandexBot
-        },
-    },
-};
+}
+
 
 async function getData() {
     const hotelData = {
@@ -82,28 +45,6 @@ async function getData() {
 export default async function Reservation() {
     const {allHotel, currentHotel, apartmentsFromHotel} = await getData();
 
-    const jsonLd = {
-        "url": "https://shikarnyivid.ru/reservation",
-        "description": "Выбирайте и бронируйте номера на Черном море в Кабардинке в нашем отеле. Сравните цены, количество комнат и вместимость для идеального отдыха у моря.",
-        "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Главная",
-                    "item": "https://shikarnyivid.ru"
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Бронирование",
-                    "item": "https://shikarnyivid.ru/reservation"
-                }
-            ]
-        }
-    };
-
     const validateAllHotels = validateArray(allHotel);
     const validateApartmentsFromHotel = validateArray(apartmentsFromHotel);
     const validateCurrentHotel = validateObject(currentHotel);
@@ -111,7 +52,7 @@ export default async function Reservation() {
     return (
         <section className={styles.main}>
             <script type="application/ld+json"
-                    dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}
+                    dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLDReservationPage)}}
             />
             <HeaderLineBackground hotelNumber={numberCurrentHotel}/>
 

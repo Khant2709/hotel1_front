@@ -10,8 +10,11 @@ import WindowPopUp from "../../components/windowPopUp/windowPopUp";
 import {PopUpAdminProvider} from "../../utils/useWindowPopUpAdmin";
 import WindowPopUpAdmin from "../../components/windowPopUpAdmin/windowPopUpAdmin";
 import MyFooter from "../../components/myFooter/myFooter";
+import {viewportMain} from "../../metaSeo/viewport";
 
 const inter = Inter({subsets: ["latin"]});
+
+export const viewport = viewportMain;
 
 export const metadata = {
     site_name: 'Отель Шикарный Вид',
@@ -32,21 +35,21 @@ export const metadata = {
     icons: {
         // Основная иконка сайта (favicon), отображается во вкладке браузера
         icon: {
-            url: '/favicon.png', // URL основной иконки (обязательно абсолютный)
+            url: '/favicon32.png', // URL основной иконки (обязательно абсолютный)
             type: 'image/png',   // Тип файла (PNG)
             width: 32,            // Ширина иконки (32 пикселя)
             height: 32,           // Высота иконки (32 пикселя)
         },
         // Ярлык для добавления на домашний экран устройства
         shortcut: {
-            url: '/shortcut-icon.png', // URL ярлыка (обязательно абсолютный)
+            url: '/favicon192.png', // URL ярлыка (обязательно абсолютный)
             type: 'image/png',         // Тип файла (PNG)
             width: 192,                 // Ширина ярлыка (192 пикселя)
             height: 192,                // Высота ярлыка (192 пикселя)
         },
         // Иконка для Safari на устройствах Apple
         apple: {
-            url: '/apple-icon.png', // URL иконки для Safari (обязательно абсолютный)
+            url: '/favicon180.png', // URL иконки для Safari (обязательно абсолютный)
             type: 'image/png',      // Тип файла (PNG)
             width: 180,              // Ширина иконки (180 пикселей)
             height: 180,             // Высота иконки (180 пикселей)
@@ -54,7 +57,7 @@ export const metadata = {
         // Другие специфичные иконки или свойства
         other: {
             rel: 'apple-touch-icon-precomposed', // Тип иконки (для Safari)
-            url: '/apple-touch-icon-precomposed.png', // URL другой иконки (обязательно абсолютный)
+            url: '/favicon180.png', // URL другой иконки (обязательно абсолютный)
             type: 'image/png',     // Тип файла (PNG)
             width: 180,             // Ширина иконки (180 пикселей)
             height: 180,            // Высота иконки (180 пикселей)
@@ -89,7 +92,7 @@ export default function RootLayout({children}) {
         "@context": "https://schema.org",
         "@type": "Hotel",
         "name": "Отель Шикарный Вид",
-        "logo": "",
+        "logo": "https://shikarnyivid.ru/favicon180.png",
         "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+7-989-2430-60-80",

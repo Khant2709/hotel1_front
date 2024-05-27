@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Times New Roman';
     src: local('Times New Roman'),
-    url('../fonts/inter/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+    url('./timesNewRoman/ofont.ru_Times New Roman.ttf') format('truetype');
     font-display: swap;
 }
 

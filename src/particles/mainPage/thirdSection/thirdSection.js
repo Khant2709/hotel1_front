@@ -27,7 +27,9 @@ const ThirdSection = ({hotel}) => {
                         </ul>
                         <p className={styles.subTitle}>О пляже:</p>
                         {hotel.beachInformation.split('&').map((el, i) => {
-                            return <p key={i}>{el}</p>
+                            return <p key={i}>
+                                {el}
+                            </p>
                         })}
                     </div>
 
@@ -45,10 +47,10 @@ const ThirdSection = ({hotel}) => {
                 </div>
                 <div className={styles.secondContainerMobile}>
                     <marquee behavior={'alternate'} scrollamount={5} loop={-1}>
-                                    {testRoomsPhotos.slice(0, 4).map((photo, index) => {
-                                        return <Image key={index} alt={'img'} src={photo} className={styles.otherImg}/>
-                                    })}
-                                </marquee>
+                        {testRoomsPhotos.slice(0, 4).map((photo, index) => {
+                            return <Image key={index} alt={'img'} src={photo} className={styles.otherImg}/>
+                        })}
+                    </marquee>
                 </div>
             </div>
         </section>

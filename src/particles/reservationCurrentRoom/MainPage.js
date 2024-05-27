@@ -131,7 +131,7 @@ export default function MainPage({
         const chekReservation = validateBookingDate({filterBooking, startDate, endDate});
         chekReservation && setErrorReservation('На выбранную дату место занято');
 
-    }, [startReservation, endReservation, countPeopleReservation])
+    }, [currentRoom, dataEndReservation, dataStartReservation, filterBooking, countPeopleReservation, today])
 
 
     return (
